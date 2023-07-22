@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anandam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* Your CSS styles with updated font-family */
+        body {
+            font-family: 'Poppins', sans-serif; /* Default font for body text */
+        }
+        h1 {
+            font-family: 'Poppins', sans-serif; /* Font for the heading */
+            font-weight: 600; /* Semibold weight */
+        }
+        #messageInput::placeholder {
+            font-family: 'Poppins', sans-serif; /* Font for the text input placeholder */
+            font-weight: 300; /* Light weight */
+        }
+
+    /* Your CSS styles with updated font-family and text alignment */
+    body {
+        font-family: 'Poppins', sans-serif; /* Default font for body text */
+        text-align: center; /* Center-align body text */
+    }
+    h1 {
+        font-family: 'Poppins', sans-serif; /* Font for the heading */
+        font-weight: 600; /* Semibold weight */
+    }
+    #messages {
+        text-align: left; /* Left-align messages */
+        max-width: 400px; /* Adjust the width as needed */
+        margin: 0 auto; /* Center-align the messages container */
+    }
+    #messageInput {
+        font-family: 'Poppins', sans-serif; /* Font for the text input */
+        font-weight: 300; /* Light weight */
+        padding: 5px;
+        margin-bottom: 10px; /* Add some space below the input */
+    }
+    .divider {
+        border-bottom: 1px solid #ccc;
+        margin: 10px;
+    }
+
+function sendMessage() {
+        var messageInput = document.getElementById('messageInput');
+        var message = messageInput.value.trim();
+        if (message !== '') {
+            appendMessage(message);
+            messageInput.value = '';
+        }
+    }
+
+    function appendMessage(message) {
+        var messagesList = document.getElementById('messagesList');
+        var listItem = document.createElement('li');
+        listItem.textContent = message;
+        messagesList.appendChild(listItem);
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1>Anandam</h1>
+    <input type="text" id="messageInput" placeholder="Enter your message">
+    <button onclick="sendMessage()">Send</button>
+
+    <div class="divider"></div>
+
+    <div id="messages">
+        <!-- Messages will be displayed here -->
+    </div>
+
+   <script>
+    function sendMessage() {
+        var messageInput = document.getElementById('messageInput');
+        var message = messageInput.value.trim();
+        if (message !== '') {
+            appendMessage(message);
+            messageInput.value = '';
+        }
+    }
+
+    function appendMessage(message) {
+        var messagesDiv = document.getElementById('messages');
+        var divider = document.createElement('hr');
+        var messageContainer = document.createElement('div');
+        messageContainer.textContent = message;
+        messagesDiv.appendChild(messageContainer);
+        messagesDiv.appendChild(divider);
+    }
+
+
+    function appendMessage(message) {
+        var messagesDiv = document.getElementById('messages');
+        var messageContainer = document.createElement('div');
+        messageContainer.textContent = message;
+        messagesDiv.appendChild(messageContainer);
+
+        var divider = document.createElement('hr');
+        messagesDiv.appendChild(divider);
+    }
+
+
+
+        function appendMessage(message) {
+            var messagesDiv = document.getElementById('messages');
+            var messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messagesDiv.appendChild(messageElement);
+        }
+    </script>
+</body>
+</html>
