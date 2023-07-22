@@ -36,14 +36,22 @@
     </div>
 
     <script>
-        function sendMessage() {
-            var messageInput = document.getElementById('messageInput');
-            var message = messageInput.value.trim();
-            if (message !== '') {
-                appendMessage(message);
-                messageInput.value = '';
-            }
+    function sendMessage() {
+        var messageInput = document.getElementById('messageInput');
+        var message = messageInput.value.trim();
+        if (message !== '') {
+            appendMessage(message);
+            messageInput.value = '';
         }
+    }
+
+    function appendMessage(message) {
+        var messagesDiv = document.getElementById('messages');
+        var messageElement = document.createElement('div');
+        messageElement.textContent = message;
+        messagesDiv.appendChild(messageElement);
+    }
+
 
         function appendMessage(message) {
             var messagesDiv = document.getElementById('messages');
