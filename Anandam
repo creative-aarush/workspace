@@ -47,10 +47,14 @@
 
     function appendMessage(message) {
         var messagesDiv = document.getElementById('messages');
-        var messageElement = document.createElement('div');
-        messageElement.textContent = message;
-        messagesDiv.appendChild(messageElement);
+        var messageContainer = document.createElement('div');
+        messageContainer.textContent = message;
+        messagesDiv.appendChild(messageContainer);
+
+        var divider = document.createElement('hr');
+        messagesDiv.appendChild(divider);
     }
+
 
 
         function appendMessage(message) {
